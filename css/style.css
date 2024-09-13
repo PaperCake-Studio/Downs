@@ -1008,3 +1008,45 @@ ul.social_icon li a i:hover {
 
 /** end footer **/
 
+/** download page **/
+ul.downEasy li a {
+     font-size: 27px;
+     padding: 18px 21px;
+     width: 100%;
+     line-height: 36px;
+     display: block;
+}
+
+
+ul.downEasy li.active a {
+     background: #060505;
+     color: #fff;
+}
+
+ul.downEasy li a:hover {
+     background: #060505;
+     color: #fff;
+}
+
+.downObj {
+     display: flex; 
+     background-color: lightblue; 
+     justify-content: space-between; 
+     align-items: center; 
+     position: relative; 
+     overflow: hidden; 
+     flex-direction: row; 
+     margin-bottom: 20px;
+}
+
+.downObj span {
+     font-size: 30px;
+     justify-self: center; 
+     margin-left: 20px; 
+     color: #000;
+}
+
+.downObj a {
+     max-width: 100px; 
+     margin: 10px;
+}
