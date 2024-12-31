@@ -33,7 +33,11 @@
    <body class="main-layout">
       <!-- loader  -->
       <div class="loader_bg">
-         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+         <div class="jumper">
+             <div></div>
+             <div></div>
+             <div></div>
+         </div>
       </div>
       <!-- end loader -->
       <div class="wrapper">
@@ -85,6 +89,7 @@
          <!-- end header inner -->
          <!-- end header -->
          <!-- banner -->
+         <div class="gradientPanel"></div> 
          <div id="myCarousel" class="carousel banner_main" data-ride="carousel">
             <div class="carousel-inner">
                <div class="carousel-item active">
@@ -93,8 +98,15 @@
                         <div class="row">
                            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
                               <div class="text-bg">
-                                 <h1>致力做<br>世界最唐的<br>数学软件</h1>
-                                 <p>我们致力于创建唐氏软件，解救受唐氏数学题压迫已久的学生们。人，生而自由，不是学校的框架能限制的住的。从不放弃，因为没得选。</p>
+                                 <h1 class="rotation">拿回<br><mark style="color: #333;">属于自己的</mark><br>
+                                    <div class="mask">
+                                       <span data-show>自由<br>&nbsp;</span>
+                                       <span>公平<br>&nbsp;</span>
+                                       <span>公正<br>&nbsp;</span>
+                                       <span>解放<br>&nbsp;</span>
+                                    </div>
+                                 </h1>
+                                 <p><i>更智能的，更自由的。<br><span style="font-size: 20px;"><span style="color: lime;">唐氏练习题</span>在你眼前。</span></i></p>
                                  <a class="read_more" href="download.html">现在下载</a>
                               </div>
                            </div>
@@ -107,7 +119,7 @@
                      </div>
                   </div>
                </div>
-            </div> 
+            </div>
          <!-- end banner -->
          <!-- about -->
          <div id="about"  class="about">
@@ -121,7 +133,7 @@
                   <div class="col-md-7">
                      <div class="titlepage">
                         <h2>关于<span class="blue">我们</span></h2>
-                        <p style="font-size: 19px; line-height: 28px;"><span class="quote">人与法西斯无法共存。——瓦西里·格罗斯曼</span><br>使用这个软件，可以帮你快速完成进度，管它要求的是多少，100？130？1300？随便都行！<br><span class="red" style="font-size: 30px; line-height: 40px;">不自由，毋宁死。</span> </p>
+                        <p style="font-size: 19px; line-height: 28px;"><span class="quote"><mark style="color: #333;">人与法西斯无法共存。</mark>——瓦西里·格罗斯曼</span><br>使用这个软件，可以帮你快速完成进度，管它要求的是多少，100？130？1300？随便都行！<br><span class="red" style="font-size: 30px; line-height: 40px;"><mark>不自由，毋宁死。</mark></span> </p>
                         
                      </div>
                   </div>
@@ -149,7 +161,7 @@
                               <div class="choose_box">
                                  <i><img src="images/admin.png" alt="#"></i>
                                  <h3>独创优势</h3>
-                                 <div class="quote">一个人被打败不算完蛋，当他放弃就真正完蛋了。——理查德·尼克松</div>
+                                 <div class="quote"><mark style="color: #333;">一个人被打败不算完蛋，当他放弃就真正完蛋了。</mark>——理查德·尼克松</div>
                                  <p>
                                     在以前，没有人指望着会有人从唐氏练习题的水深火热之中解救他们，但是我们来了。我们采用的光明正大的方式，绝不隐瞒，但是肯定没有人会去做这件费力不讨好的东西，除非真的有人在乎他们。我们的独创优势使我们在这个行业里是第一个做这件事的人，并且我们保证，唯有死亡能阻挡我们维护的步伐。
                                  </p>
@@ -169,7 +181,7 @@
                   <div class="col-md-7">
                      <div class="titlepage">
                         <h2>如何<span class="blue">使用</span></h2>
-                        <div class="quote">自由是人民争取出来的，不是什么人恩赐的。 <br/>——毛泽东</div>
+                        <div class="quote"><mark style="color: #333;">自由是人民争取出来的，不是什么人恩赐的。</mark> <br/>——毛泽东</div>
                         <p>打开软件后，输入账号密码登录。登录后，在“总览”页可以看到详细信息，<br>右键表项可以进行操作，例如处理或者加入队列。更多内容请自行探索。</p>
                         <a class="read_more" href="download.html">即刻下载</a>
                      </div>
@@ -192,7 +204,7 @@
                   <div class="container">
                      <div class="row">
                         <div class="col-md-12">
-                           <p>Copyleft (L) 2024 All Right Respected By <a href="#"> RDF People's Libertation Front</a></p>
+                           <p>Copyleft (L) 2025 All Right Respected By <a href="#"> RDF People's Libertation Front</a></p>
                         </div>
                      </div>
                   </div>
@@ -244,6 +256,58 @@
                  $(this).removeClass('transition');
              });
          });
+      </script>
+
+      <script>
+         setInterval(function() {
+            const show = document.querySelector("span[data-show]")
+            const next = show.nextElementSibling || document.querySelector("span:first-child")
+            const up = document.querySelector("span[data-up]")
+  
+            if (up) {
+               up.removeAttribute("data-up")
+            }
+  
+            show.removeAttribute("data-show")
+            show.setAttribute("data-up", "")
+  
+            next.setAttribute("data-show", "")
+         }, 2000)
+      </script>
+
+      <script>
+         
+
+         let loadingObserver = new MutationObserver((mutations) => {
+            mutations.forEach(mutation => {
+               if (mutation.type == "attributes") {
+                  if (document.querySelector(".loader_bg").style.display == "none") {
+                     let observer = new IntersectionObserver((entries, observer) => {
+                        entries.forEach(entry => {
+                           if (entry.isIntersecting) {
+                              entry.target.classList.add("animate")
+                              observer.unobserve(entry.target)
+                           }     
+                        })
+                     })
+
+                     document.querySelectorAll("mark").forEach(mark => {
+                        observer.observe(mark)
+                     })
+
+                     document.querySelectorAll("i").forEach(el => {
+                        el.classList.add("swiftAndFade")
+                     })
+
+                     document.querySelectorAll("a.read_more").forEach(el => {
+                        el.classList.add("swiftAndFade")
+                     })
+                  }
+               }
+            }) 
+         })
+
+         loadingObserver.observe(document.querySelector(".loader_bg"), {attributes: true, attributeFilter: ["style"]}) 
       </script>
    </body>
 </html>
