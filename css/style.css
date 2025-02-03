@@ -112,7 +112,7 @@
        50vmax 50vmax !important;
      background-repeat: no-repeat !important;
      animation: 5s gradientMovement linear infinite;
-     top: -20vh;
+     top: -30vh;
      position: relative;
    }
    
@@ -124,8 +124,6 @@
      height: 100%;
      top: 0;
      left: 0;
-     backdrop-filter: blur(10px);
-     -webkit-backdrop-filter: blur(10px);
    }
    
    
