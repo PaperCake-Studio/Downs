@@ -37,6 +37,16 @@
      box-sizing: border-box !important;
 }
 
+a.disabled {
+     pointer-events: none !important;
+     cursor: default !important;
+     color: darkgray !important;
+}
+
+a.disabled:hover {
+     background-color: initial !important;
+}
+
 @font-face {
      font-family: "MiSans";
      src: url("../fonts/MiSans-Heavy.ttf") format("truetype");
