@@ -802,7 +802,7 @@ ul.btn li:last-child {
      font-size: 71px;
      line-height: 85px;
      padding-bottom: 25px;
-     font-weight: bold;
+     font-weight: bold !important;
 }
 
 .text-bg p {
@@ -815,6 +815,7 @@ ul.btn li:last-child {
      text-shadow: 1px 1px 2px black;
      overflow: hidden;
      margin-top: 20px;
+     padding: 0;
 }
 
 .text-bg .read_more {
